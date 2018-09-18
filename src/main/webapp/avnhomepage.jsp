@@ -54,7 +54,7 @@ color:white;
 </section>
 <section class="wlp-login-message-content" style="left: 640px;top: 210px;">
 <b><p style="text-align: center;font-size: 25px;">REPAIR</p></b>
-<a href="avntroubleshootpage.jsp" style="color: white;font-size: 20px;position: absolute;left:71px;">TroubleShoot</a><br>
+<a href="" style="color: white;font-size: 20px;position: absolute;left:71px;">TroubleShoot</a><br>
 <a href="avncreatepage.jsp" style="color: white;font-size: 20px;position: absolute;left:71px;">Create</a><br>
 <a href="${pageContext.request.contextPath}/viewticket.do" style="color: white;font-size: 20px;position: absolute;left:75px;">View1</a><br>
 </section>
