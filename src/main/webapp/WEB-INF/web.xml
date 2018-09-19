@@ -21,9 +21,17 @@
     <servlet-name>viewticket</servlet-name>
     <servlet-class>servlet.viewticket</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>troubleshoot</servlet-name>
+    <servlet-class>servlet.troubleshoot</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>viewticket</servlet-name>
     <url-pattern>/viewticket.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>troubleshoot</servlet-name>
+    <url-pattern>/troubleshoot.do</url-pattern>
   </servlet-mapping>
   
   <welcome-file-list>
