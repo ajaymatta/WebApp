@@ -49,14 +49,14 @@ public class troubleshoot extends HttpServlet {
 				}
 				instream.close();
 
-				System.out.println("Rest Api Response " +sb.toString());
-				logger.debug("This is debug : " + sb.toString());
+				//System.out.println("Rest Api Response " +sb.toString());
+				logger.info("Rest Api Response : " + sb.toString());
 				JSONObject myResponse = new JSONObject(sb.toString());
 				out.print(myResponse.optString("link"));
 			}
 			catch(Exception e) {
-				logger.error("This is debug : " + e);
-				System.out.println("Exception occurred : "+e);
+				logger.error("Exception occurred :" + e);
+				//System.out.println("Exception occurred : "+e);
 			}
 	}
 
