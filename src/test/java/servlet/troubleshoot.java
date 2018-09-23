@@ -25,12 +25,14 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.InputStream;
+import org.apache.log4j.Logger;
 
 public class troubleshoot extends HttpServlet {
 	
 	public void service(HttpServletRequest req,HttpServletResponse res)
 		    throws ServletException, IOException{
-			try{
+			final Logger logger = Logger.getLogger(troubleshoot.class);
+			try{							
 				res.setContentType("text/html");
 				PrintWriter out=res.getWriter();
 				
@@ -47,11 +49,13 @@ public class troubleshoot extends HttpServlet {
 				}
 				instream.close();
 
-				System.out.println("Rest Api Response " +sb.toString()); 
+				System.out.println("Rest Api Response " +sb.toString());
+				logger.debug("This is debug : " + sb.toString());
 				JSONObject myResponse = new JSONObject(sb.toString());
 				out.print(myResponse.optString("link"));
 			}
 			catch(Exception e) {
+				logger.error("This is debug : " + e);
 				System.out.println("Exception occurred : "+e);
 			}
 	}
